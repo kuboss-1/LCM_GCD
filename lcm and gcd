@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ebob(int a, int b)
+{
+    int  ebob;
+
+    for (int i = 1; i<=a && i<=b; i++ )
+    {
+        if( a%i==0 && b%i==0)
+        {
+            ebob = i;
+
+        }
+    }
+
+    printf("GCD is %d", ebob);
+    return 0;
+
+
+}
+
+int ekok(int c, int d)
+{
+    int lcm, max;
+
+    max = (c > d) ? c : d;
+
+    lcm = max;
+
+    while ((lcm % c != 0) || (lcm % d != 0)) {
+        lcm += max;
+    }
+
+    printf("LDM is %d", lcm);
+    }
+int main()
+{
+    int a, b;
+    printf("Please enter 2 integers: ");
+    scanf("%d%d", &a, &b);
+    ekok(a,b);
+    printf("\n");
+    ebob(a,b);
+
+
+}
